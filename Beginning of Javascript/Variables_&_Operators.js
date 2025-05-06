@@ -187,6 +187,10 @@ console.log(j); // 14
 
 let k = 5; // assign 5 to k
 
+/* Strict equality operator */
+
+let isEqual = (k === 5); // true (both value and type are equal)
+
 //Chaining assignment
 let l = m = n = 0; // assign 0 to m, n, and l
 
