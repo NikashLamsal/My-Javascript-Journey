@@ -225,9 +225,220 @@ console.log(t.split("|")) // [ 'Apple,Banana ', ' Kiwi' ]
 // eval() function
 //eval() is a JavaScript function that allows you to execute a string as JavaScript code. The function takes a string argument and evaluates it as a JavaScript expression, then returns the result of the evaluation.
 const s1 = "2 + 2"; // creates a string primitive
-const s2 = new String("2 + 2"); // creates a String object
+const s2 = new String("2 + 2") // creates a String object
 console.log(eval(s1)); // returns the number 4
 console.log(eval(s2)); // returns the string "2 + 2"
 
 //A String object can always be converted to its primitive counterpart with the valueOf() method.
-console.log(eval(s2.valueOf())); // returns the number 4
+console.log(eval(s2.valueOf())) // returns the number 4
+
+
+/* indexOf(substring) method */
+//The indexOf() method returns the position of the first occurrence of a specified value in a string.
+
+let sentence = "JavaScript is awesome!"
+console.log(sentence.indexOf("awesome")) // Output: 14
+
+/* lastIndexOf(substring) method */
+//The lastIndexOf() method returns the position of the last occurrence of a specified value in a string.
+console.log(sentence.lastIndexOf("awesome")) // Output:  14
+
+/* includes(substring) method */
+//The includes() method returns true if a string contains a specified value, otherwise false.
+console.log(sentence.includes("Java"))    // Output: true
+
+
+/* startsWith(substring) method */
+//The startsWith() method returns true if a string begins with a specified value, otherwise false.
+console.log(sentence.startsWith("Java"))  // Output: true
+
+
+/* endsWith(substring) method */
+//The endsWith() method returns true if a string ends with a specified value, otherwise false.
+console.log(sentence.endsWith("!"))      // Output: true
+
+
+/* search() method */
+//The search() method searches a string for a specified value and returns the position of the match.
+//The search() method returns -1 if no match is found.
+let a = "I love JavaScript!"
+
+let position1 = text.search("JavaScript")
+console.log(position1); // Output: 7
+
+let position2 = text.search(/javascript/i)
+console.log(position2); // Output: 7
+
+
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+/*          Conditionals           */
+
+// Comparison Operators
+ /* String comparison  */
+console.log( 'Z' > 'A' ) // true
+console.log( 'Glow' > 'Glee' ) // true
+console.log( 'Bee' > 'Be' ) // true
+
+/*Comparison of different types */
+console.log( '2' > 1 ) // true, string '2' becomes a number 2
+console.log( '01' == 1 ) // true, string '01' becomes a number 1
+
+console.log( true == 1 ) // true
+console.log( false == 0 ) // true
+
+let c = 0;
+console.log( Boolean(c) ) // false
+
+let b = "0";
+console.log( Boolean(b) ) // true
+
+console.log(c == b) // true!
+
+/* Strict equality  */
+// The strict equality operator (===) checks for equality without type conversion.
+
+console.log( 0 == false ) // true
+console.log( '' == false ) // true
+
+console.log( 0 === false ) // false, because the types are different
+
+
+
+/* Null vs 0 */
+console.log( null > 0 )  // (1) false
+console.log( null == 0 ) // (2) false
+console.log( null >= 0 ) // (3) true
+
+// An incompairable undefined
+console.log( undefined > 0 ) // false (1)
+console.log( undefined < 0 ) // false (2)
+console.log( undefined == 0 ) // false (3)
+
+/*
+Comparisons (1) and (2) return false because undefined gets converted to NaN and NaN is a special numeric value which returns false for all comparisons.
+The equality check (3) returns false because undefined only equals null, undefined, and no other value.
+*/
+
+/* JavaScript if, else, and else if  */
+let hour = 10
+let say
+// if statement
+if (hour < 18) {
+    say = "Good day"
+  }
+
+// if else statement
+
+if (hour < 18) {
+     say = "Good day"
+  } else {
+    say = "Good evening"
+  }
+
+// else if statement
+let time = 19 
+if (time < 10) {
+    say  = "Good morning"
+  } else if (time < 20) {
+    say  = "Good day"
+  } else {
+    say  = "Good evening"
+  }
+
+/* Logical Operators */
+// Logical operators are used to combine two or more conditions.
+
+// || (OR) operator
+
+let hou = 9
+
+if (hou < 10 || hou > 18) {
+  console.log( 'The office is closed.' )
+}
+
+let firstName = ""
+let lastName = ""
+let nickName = "SuperCoder"
+
+console.log( firstName || lastName || nickName || "Anonymous") // SuperCoder
+
+//If all variables were falsy, "Anonymous" would show up.
+
+
+// && (AND) operator
+let hr = 12;
+let min = 30;
+
+if (hr == 12 && min == 30) {
+    console.log( 'The time is 12:30' )
+}
+
+// if the first operand is truthy,
+// AND returns the second operand:
+console.log( 1 && 0 ) // 0
+console.log( 1 && 5 ) // 5
+
+// if the first operand is falsy,
+// AND returns it. The second operand is ignored
+console.log( null && 5 ) // null
+console.log( 0 && "no matter what" ); // 0
+
+//The precedence of AND && operator is higher than OR ||.
+
+
+
+// ! (NOT) operator
+// The NOT operator negates a boolean value.
+
+console.log( !true ) // false
+console.log( !0 ); // true
+
+/*   switch statements  */ 
+
+
+// Syntax
+/*
+switch (expression) {
+  case choice1:
+    // run this code
+    break
+
+  case choice2:
+    // run this code instead
+    break
+
+  // include as many cases as you like
+
+  default:
+    // actually, just run this code
+    break
+}
+*/
+
+let m = 2 + 2;
+
+switch (m) {
+  case 3:
+    console.log( 'Too small' )
+    break;
+  case 4:
+    console.log( 'Exactly!' )
+    break;
+  case 5:
+    console.log( 'Too big' )
+    break;
+  default:
+    console.log( "I don't know such values" )
+}
+
+/* Trenary Operator */
+
+// condition ? expr1 : expr2
+isBirthday = true
+const greet = isBirthday
+  ? "Happy birthday Mrs. Smith — we hope you have a great day!"
+  : "Good morning Mrs. Smith."
+console.log(greet) // Happy birthday Mrs. Smith — we hope you have a great day!
