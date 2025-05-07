@@ -194,6 +194,7 @@ let isEqual = (k === 5); // true (both value and type are equal)
 //Chaining assignment
 let l = m = n = 0; // assign 0 to m, n, and l
 
+
 /* Bitwise Operators */
 let bitwiseAnd = 5 & 1; // 1 (0101 & 0001 = 0001)
 let bitwiseOr = 5 | 1; // 5 (0101 | 0001 = 0101)
@@ -201,6 +202,10 @@ let bitwiseXor = 5 ^ 1; // 4 (0101 ^ 0001 = 0100)
 let bitwiseNot = ~5; // -6 (inverts all bits)
 let leftShift = 5 << 1; // 10 (0101 << 1 = 1010)
 let rightShift = 5 >> 1; // 2 (0101 >> 1 = 0010)
+
+/* Typeof Operator */
+let typeOfX = typeof x; // "number"
+console.log(typeOfX) // number
 
 /* Additional information */
 /*
