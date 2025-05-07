@@ -70,11 +70,11 @@ greetUser() // Output: Hello, Nikash!
 
 // Default values
 function greet(name = "Guest") {
-    console.log("Hello, " + name + "!");
+    console.log("Hello, " + name + "!")
   }
   
-  greet();           // Output: Hello, Guest!
-  greet("Nikash");   // Output: Hello, Nikash!
+  greet()          // Output: Hello, Guest!
+  greet("Nikash")   // Output: Hello, Nikash!
 
 
 
@@ -84,8 +84,8 @@ function add(a, b) {
     return a + b; // returns the sum of a and b
   }
   
-  let result = add(5, 3); // result will be 8
-  console.log(result); // Output: 8
+  let result = add(5, 3) // result will be 8
+  console.log(result) // Output: 8
 
 
 
@@ -229,22 +229,26 @@ function add(a, b) {
 /*Multiline arrow functions*/
 
 let sum = (a, b) => {  // the curly brace opens a multiline function
-    let result = a + b;
-    return result; // if we use curly braces, then we need an explicit "return"
+    let result = a + b
+    return result // if we use curly braces, then we need an explicit "return"
   }
   
-  alert( sum(1, 2) ); // 3
+  alert( sum(1, 2) ) // 3
 
 
 
 /*  JavaScript Call Stack */
 function add(a, b) {
-    return a + b;
+    return a + b
 }
 
 function average(a, b) {
-    return add(a, b) / 2;
+    return add(a, b) / 2
 }
 
-let x = average(10, 20);
+let x = average(10, 20)
 
+/* Additional infortmation: */
+// The call stack is a mechanism that keeps track of function calls in JavaScript. When a function is called, it is added to the top of the stack, and when it returns, it is removed from the stack. This allows JavaScript to keep track of which function is currently executing and where to return after a function call.
+// The call stack is a Last In, First Out (LIFO) data structure, meaning that the last function added to the stack is the first one to be removed when it returns.
+// If a function calls another function, the first function is paused until the second function returns. This is how JavaScript handles asynchronous operations and ensures that the program runs in a predictable manner.
