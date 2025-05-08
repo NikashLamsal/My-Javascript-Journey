@@ -9,6 +9,8 @@ Welcome to **My JavaScript Journey** – a personal learning repository where I 
 - Variables and Operators
 - Data Types & Conditionals 
 - Function Basics
+- Problem Solving
+- Understanding Errors
 
 ---
 
