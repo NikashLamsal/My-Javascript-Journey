@@ -1,0 +1,21 @@
+h2 {
+    background-color: green;
+    color: rgb(174, 255, 54);
+    text-align: center;
+    padding: 20px;
+    font-size: 2em;
+    margin: 0;
+    border-radius: 10px;
+
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease;
+}
+
+.box{
+    height: 100px;
+    width: 100px;
+    border: 1px solid black;
+    margin: 5px;
+    text-align: center;
+    background-color: bisque;
+}
