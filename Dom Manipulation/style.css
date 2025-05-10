@@ -19,3 +19,11 @@ h2 {
     text-align: center;
     background-color: bisque;
 }
+
+div {
+    justify-content: center;
+    justify-items: center;
+    text-align: center;
+    display: flex;
+
+}
