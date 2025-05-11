@@ -38,8 +38,26 @@ element.querySelectorAll(selectors) - returns a “NodeList” containing refere
 
 
 
-// Element creation
-const div = document.createElement("div");
+// new Element creation
+const nbtn = document.createElement("button");
+console.log(nbtn);
+nbtn.innerText = "click me ";
+//add at the end of the node (append)
+let div = document.querySelector("div");
+div.append(nbtn);
+// at start prepend
+div.prepend(nbtn);
+//before
+div.before(nbtn);
+//ater
+div.after(nbtn);
+
+
+// addign new  heading 
+const nheading = document.createElement("h1");
+nheading.innerHTML ="<i> Hi , it's me Nikash </i>";
+document.querySelector("body").prepend(nheading);
+
 // Adding inline style
 // adds the indicated style rule to the element in the div variable
 div.style.color = "blue";
@@ -73,7 +91,6 @@ div.style["backgroundColor"];
 
 
 
-
 // Editing attributes
 
 // if id exists, update it to 'theDiv', else create an id with value "theDiv"
@@ -85,7 +102,9 @@ div.getAttribute("id");
 // removes specified attribute
 div.removeAttribute("id");
 
-
+// removing element 
+let para = document.querySelector("p");
+para.remove();
 
 
 
@@ -116,7 +135,7 @@ div.textContent = "Hello World!";
 let h2 = document.querySelector("h2");
 console.dir(h2.innerText); 
 h2.innerText = h2.innerText + " from Nikash Lamsal ";
-
+ 
 
 let divs = document.querySelectorAll("div");
 console.log(divs[1]); // NodeList(3) [div#heading, div.heading, div.heading]
@@ -128,4 +147,4 @@ for (div of divs) {
     idx++;
    }
 
- 
+ console.log("div");
