@@ -11,6 +11,8 @@ Welcome to **My JavaScript Journey** – a personal learning repository where I 
 - Function Basics
 - Problem Solving
 - Understanding Errors
+- DOM Manipulation
+- Event Handeling
 
 ---
 
